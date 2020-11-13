@@ -1,0 +1,24 @@
+.footer {
+  //   min-height: 60px;
+  //   background-color: rgba(0, 0, 0, 1.5);
+  //   opacity: 0.3;
+  //   position: fixed;
+  //   bottom: 0px;
+  //   width: 100%;
+  position: relative;
+  //   position: sticky;
+  bottom: 0px;
+}
+
+.footer__list {
+  opacity: 1;
+}
+
+.footer__dark-line {
+  min-height: 60px;
+  background-color: rgba(0, 0, 0, 1.5);
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}

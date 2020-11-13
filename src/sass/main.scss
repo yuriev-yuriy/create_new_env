@@ -1,0 +1,16 @@
+.main__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__list-item {
+  padding: 53px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main__list-item:not(:nth-last-child(-n + 1)) {
+  margin-bottom: 14px;
+}
