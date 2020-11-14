@@ -1,3 +1,7 @@
+.main-container {
+  margin-bottom: 100px;
+}
+
 .main__list {
   display: flex;
   flex-direction: column;
@@ -6,11 +10,29 @@
 }
 
 .main__list-item {
-  padding: 53px;
-  border: 1px solid #fff;
+  padding: 33px 53px 0px 53px;
   background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // margin-bottom: 10px;
 }
 
 .main__list-item:not(:nth-last-child(-n + 1)) {
   margin-bottom: 14px;
+}
+
+.main__descr-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+  width: 159%;
+  background: rgb(177, 173, 173);
+  z-index: -2;
+  margin-top: 10px;
+}
+
+.main__list-descr {
+  text-transform: uppercase;
 }
