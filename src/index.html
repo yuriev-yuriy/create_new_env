@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>фотограф Агафья Глифинская 3я</title>
+    <link rel="stylesheet" href="./sass/footer.css">
     <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>    
   </head>
 
@@ -23,10 +24,10 @@
         <li class="header__list-item"><a class="header__list-link" href="#">Contacts</a></li>
       </ul>
     </header>
-    <main class="container">
+    <main class="container main-container">
       <ul class='main__list'>
         <li class='main__list-item'><img src="./images/lifestyle-mob180x180.jpg" alt="Lifestyle">
-          <p>Lifestyle</p>
+          <div class="main__descr-wrap"><p class="main__list-descr">Lifestyle</p></div>
           <ul>
             <li></li>
             <li></li>
@@ -39,7 +40,7 @@
           </ul>
         </li>
         <li class='main__list-item'><img src="./images/portrait-mob180x180.jpg" alt="portrait">
-        <p>Portrait</p>
+        <div class="main__descr-wrap"><p class="main__list-descr">Portrait</p></div>
           <ul>
             <li></li>
             <li></li>
@@ -52,7 +53,7 @@
           </ul>
         </li>
         <li class='main__list-item'><img src="./images/fashion-mob180x180.jpg" alt="fashion">
-        <p>Fashion</p>
+        <div class="main__descr-wrap"><p class="main__list-descr">Fashion</p></div>
           <ul>
             <li></li>
             <li></li>
@@ -65,7 +66,7 @@
           </ul>
         </li>
         <li class='main__list-item'><img src="./images/nature-mob180x180.jpg" alt="nature">
-        <p>Nature</p>
+        <div class="main__descr-wrap"><p class="main__list-descr">Nature</p></div>
           <ul>
             <li></li>
             <li></li>
@@ -78,7 +79,7 @@
           </ul>
         </li>
         <li class='main__list-item'><img src="./images/citylife-mob180x180.jpg" alt="city life">
-        <p>City Life</p>
+        <div class="main__descr-wrap"><p class="main__list-descr">City Life</p></div>
           <ul>
             <li></li>
             <li></li>
@@ -94,17 +95,42 @@
     </main>
     <footer class="footer">
       <div class="footer__dark-line"></div>
-      <div class="container">
+      <div class="container footer__container">
         
       <ul class="footer__list">
-        <li><a href="#">facebook</a></li>
-        <li><a href="#">tweeter</a></li>
-        <li><a href="#">google+</a></li>
-        <li><a href="#">vimeo</a></li>
-        <li><a href="#">you-tube</a></li>
-        <li><a href="#">pinterest</a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#">
+          <!-- <object type="image/svg+xml" data="./images/icons/facebook.svg" class="footer__svg"></object> -->
+          <svg class="footer__icon">
+            <use href="./images/icons/sprite.svg#icon-facebook"></use>
+          </svg>
+          <p class="visually-hidden">facebook</p></a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#">
+          <svg class="footer__icon">
+            <use href="./images/icons/sprite.svg#icon-twitter"></use>
+          </svg>
+          <p class="visually-hidden">tweeter</p></a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#">
+          <svg class="footer__icon">
+            <use href="./images/icons/sprite.svg#icon-google-plus"></use>
+          </svg>
+          <p class="visually-hidden">google+</p></a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#">
+          <svg class="footer__icon">
+            <use href="./images/icons/sprite.svg#icon-vimeo"></use>
+          </svg>
+          <p class="visually-hidden">vimeo</p></a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#">
+          <svg class="footer__icon">
+            <use href="./images/icons/sprite.svg#icon-youtube"></use>
+          </svg>
+          <p class="visually-hidden">you-tube</p></a></li>
+        <li class="footer__list-item"><a class="footer__list-link" href="#">
+          <svg class="footer__icon">
+            <use href="./images/icons/sprite.svg#icon-pinterest"></use>
+          </svg>
+          <p class="visually-hidden">pinterest</p></a></li>
       </ul>
-      <p>©  2020 . <a href="#">Privacy Policy</a></p>
+      <p class="footer__descr">©  2020 . <a href="#">Privacy Policy</a></p>
       </div>
     </footer>
     

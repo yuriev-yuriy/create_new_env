@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  bottom: 0px;
+}
+
+.footer__list {
+  opacity: 1;
+}
+
+.footer__dark-line {
+  min-height: 60px;
+  background-color: rgba(0, 0, 0, 1.5);
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footer__svg {
+  fill: red;
+  visibility: visible;
+  width: 18px;
+  height: 18px;
+  border: 1px solid red;
+}
+
+.footer__list-link {
+  color: green;
+}
