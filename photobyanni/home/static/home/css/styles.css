@@ -1,0 +1,9 @@
+@import './normalize.css';
+
+@import './helpers/fonts.css';
+@import './helpers/variables.css';
+@import './helpers/visually-hidden.css';
+@import './header.css';
+@import './main.css';
+@import './footer.css';
+@import './about.css';

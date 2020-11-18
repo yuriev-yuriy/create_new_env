@@ -1,0 +1,13 @@
+win_env/
+lin_env/
+.idea/
+
+photobyanni/config/__pycache__/
+photobyanni/about/__pycache__/
+photobyanni/about/migrations/__pycache__/
+photobyanni/contacts/__pycache__/
+photobyanni/contacts/migrations/__pycache__/
+photobyanni/home/__pycache__/
+photobyanni/home/migrations/__pycache__/
+photobyanni/services/__pycache__/
+photobyanni/services/migrations/__pycache__/

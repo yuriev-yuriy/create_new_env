@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>фотограф Агафья Глифинская 3я</title>
+        <link rel="shortcut icon" type="image/png" href="{% static 'home/images/favicon.png' %}"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'home/css/styles.css' %}">
+    </head>    
+    <body>      
+        <div class= "bg-image"></div>
+        <header class="header container">
+            <div class="header__container">
+                <a href="#" class="logo">KELISSA SMITH
+                <span class="logo__descr">LIFESTYLE PHOTOGRAPHER</span></a>
+                <p class="header__description">I am a professional <span>specializing in lifestyle</span> photography.</p>
+            </div>
+            <ul class="header__list">
+                <li class="header__list-item"><a class="header__list-link" href="{% url 'home:home_page' %}">Gallery</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="{% url 'about:about_page' %}">About me</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="{% url 'services:services_page' %}">Services</a></li>
+                <li class="header__list-item"><a class="header__list-link" href="{% url 'contacts:contacts_page' %}">Contacts</a></li>
+            </ul>
+        </header>
+
+
+        {% block content %}
+        {% endblock content %}
+    
+    
+        <footer class="footer">
+            <div class="footer__dark-line"></div>
+            <div class="container footer__container">
+                <ul class="footer__list">
+                    <li class="footer__list-item"><a class="footer__list-link" href="#">
+                        <!-- <object type="image/svg+xml" data="./images/icons/facebook.svg" class="footer__svg"></object> -->
+                        <svg class="footer__icon">
+                            <use href="{% static 'home/images/icons/sprite.svg#icon-facebook' %}"></use>
+                        </svg>
+                    <p class="visually-hidden">facebook</p></a></li>
+                    <li class="footer__list-item"><a class="footer__list-link" href="#">
+                        <svg class="footer__icon">
+                            <use href="{% static 'home/images/icons/sprite.svg#icon-twitter' %}"></use>
+                        </svg>
+                    <p class="visually-hidden">tweeter</p></a></li>
+                    <li class="footer__list-item"><a class="footer__list-link" href="#">
+                        <svg class="footer__icon">
+                            <use href="{% static 'home/images/icons/sprite.svg#icon-google-plus' %}"></use>
+                        </svg>
+                    <p class="visually-hidden">google+</p></a></li>
+                    <li class="footer__list-item"><a class="footer__list-link" href="#">
+                        <svg class="footer__icon">
+                            <use href="{% static 'home/images/icons/sprite.svg#icon-vimeo' %}"></use>
+                        </svg>
+                    <p class="visually-hidden">vimeo</p></a></li>
+                    <li class="footer__list-item"><a class="footer__list-link" href="#">
+                        <svg class="footer__icon">
+                            <use href="{% static 'home/images/icons/sprite.svg#icon-youtube' %}"></use>
+                        </svg>
+                    <p class="visually-hidden">you-tube</p></a></li>
+                    <li class="footer__list-item"><a class="footer__list-link" href="#">
+                        <svg class="footer__icon">
+                            <use href="{% static 'home/images/icons/sprite.svg#icon-pinterest' %}"></use>
+                        </svg>
+                    <p class="visually-hidden">pinterest</p></a></li>
+                </ul>
+                <p class="footer__descr">©  2020 . <a href="#">Privacy Policy</a></p>
+            </div>
+        </footer>
+
+
+    
+    </body>
+</html>
