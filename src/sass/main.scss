@@ -4,7 +4,8 @@
 
 .main__list {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -36,3 +37,26 @@
 .main__list-descr {
   text-transform: uppercase;
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main__list-item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+  .main__list-item:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main__list-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  .main__list-item:last-child {
+    margin-right: 0px;
+  }
+
+  .main__list-item:nth-child(4n) {
+    margin-bottom: 0px;
+  }
+} ;
