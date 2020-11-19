@@ -1,0 +1,374 @@
+html {
+  box-sizing: border-box;
+  font-family: 'Advent Pro', 'sans-serif';
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin: 0 auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.header {
+  margin-bottom: 40px;
+}
+
+.bg-image {
+  background-image: url(..//images/mobile-banner.png);
+  opacity: 0.2;
+  background-color: rgba(0, 0, 0, 1);
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.logo {
+  text-transform: capitalize;
+  font-size: 38px;
+  line-height: 20%;
+  margin-bottom: 40px 0;
+  padding-top: 40px;
+}
+
+.logo__container {
+  width: 300px;
+}
+
+.logo__descr {
+  font-size: 21px;
+  line-height: 20%;
+}
+
+.header__description {
+  margin: 34px 0 56px 0;
+  font-size: 24px;
+}
+
+.header__description {
+  width: 300px;
+}
+
+.header__list {
+  display: block;
+  border: 1px solid #fff;
+}
+
+.transparent {
+  display: none;
+}
+
+.header__list-item {
+  text-align: center;
+  font-size: 20px;
+  display: block;
+  padding: 6px 0 6px 0;
+}
+
+.header__list-link {
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .header__container {
+    min-height: 160px;
+    padding-top: 50px;
+  }
+
+  .header__description span {
+    display: block;
+  }
+
+  .header__list-item:hover .header__list-link {
+    color: #303030;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__list-item:hover {
+    background: #dfd8d8;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 50px;
+    margin-bottom: 70px;
+  }
+
+  .header__description {
+    margin: 0px;
+  }
+
+  .header__list {
+    border-bottom: #fff;
+    border-left: #fff;
+    border-right: #fff;
+    display: flex;
+    justify-content: space-around;
+    min-width: 400px;
+    text-align: center;
+  }
+
+  .header__list-item {
+    margin: 0 auto;
+    text-align: center;
+    min-height: 20px;
+  }
+
+  .kapec {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width: 150px;
+  }
+  .kapec::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 26px;
+    background-color: #fff;
+    transform: translate(70px, -7px);
+  }
+
+  .header__list-item:hover .kapec::after {
+    transform: rotate(130deg) translate(-50px, -50px);
+    transform-origin: 50% 50%;
+    color: #fff;
+    transition: transform 0.2s linear;
+  }
+  .header__list-link {
+    position: absolute;
+    left: 46px;
+    padding-top: 14px;
+  }
+
+  .header__list-item:hover .header__list-link,
+  .header__list-link:hover .header__list-link,
+  .kapec:hover .header__list-link {
+    padding-top: 24px;
+    color: transparent;
+    transition: padding 0.2s linear;
+    transition: color, 0.2s linear;
+  }
+
+  .transparent {
+    margin-top: -30px;
+    color: transparent;
+    display: inline-block;
+  }
+
+  .header__list-item:hover .transparent {
+    margin-top: -10px;
+    color: #fff;
+    transition: color, 0.2s linear, margin 0.3s linear;
+  }
+}
+.main-container {
+  margin-bottom: 100px;
+}
+
+.main__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__list-item {
+  padding: 33px 53px 0px 53px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__list-item:not(:nth-last-child(-n + 1)) {
+  margin-bottom: 14px;
+}
+
+.main__descr-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 53px;
+  width: 159%;
+  background: rgb(177, 173, 173);
+  z-index: -2;
+  margin-top: 10px;
+}
+
+.main__list-descr {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main__list-item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+  .main__list-item:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main__list-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+
+  .main__list-item:last-child {
+    margin-right: 0px;
+  }
+
+  .main__list-item:nth-child(4n) {
+    margin-bottom: 0px;
+  }
+}
+.footer {
+  position: relative;
+  bottom: 0px;
+}
+
+.footer__container {
+  max-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer__list {
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.footer__list-item:not(:nth-last-child(-n + 1)) {
+  margin-right: 6px;
+}
+
+.footer__dark-line {
+  min-height: 100px;
+  background-color: rgba(0, 0, 0, 1.5);
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.footer__icon {
+  fill: #fff;
+  visibility: visible;
+  width: 18px;
+  height: 18px;
+  border: 1px solid red;
+}
+
+.footer__descr {
+  margin-bottom: 18px;
+}
+
+@media (min-width: 768px) {
+  .footer__container {
+    min-width: 500px;
+    flex-wrap: nowrap;
+  }
+
+  .footer__list {
+    margin-right: 16px;
+  }
+}
+
+/* advent-pro-300 - latin */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Advent Pro Light'), local('AdventPro-Light'),
+    url('../fonts/advent-pro-v11-latin-300.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/advent-pro-v11-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* advent-pro-regular - latin */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Advent Pro Regular'), local('AdventPro-Regular'),
+    url('../fonts/advent-pro-v11-latin-regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/advent-pro-v11-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* advent-pro-700 - latin */
+@font-face {
+  font-family: 'Advent Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Advent Pro Bold'), local('AdventPro-Bold'),
+    url('../fonts/advent-pro-v11-latin-700.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url('../fonts/advent-pro-v11-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+.visually-hidden {
+  /* Удаляем элемент из потока документа */
+  position: absolute;
+  /* Временное решение для неверно произносимого, размазанного текста */
+  white-space: nowrap;
+  /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+  width: 1px;
+  height: 1px;
+  /* Скрываем вылезающий за границы контент */
+  overflow: hidden;
+  /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
+  border: 0;
+  padding: 0;
+  /* Вырезаем ту часть контента, которая должна отображаться. */
+  /* Устаревшее свойство clip для старых браузеров */
+  clip: rect(0 0 0 0);
+  /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+  clip-path: inset(50%);
+  /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+  margin: -1px;
+}
