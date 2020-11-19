@@ -1,7 +1,20 @@
+<!--Подключение шаблона и static-->
 {% extends "base/base.html" %}
 {% load static %}
 
-{% block content %}
+
+<!--Заголовок этой страницы-->
+{% block title %}About Me{% endblock title %}
+
+
+<!--Подключение стилей для этой страницы-->
+{% block styles %}
+<link rel="stylesheet" href="{% static 'about/css/about.css' %}">
+{% endblock styles %}
+
+
+<!--Блок main-->
+{% block main %}
 <div class="container about">
     <button class="about__close-btn" type="button">X</button>
     <div class="about__inner-container">
@@ -20,4 +33,4 @@
 Rat voleneni ullam corporis suscipit labasic ut aliquidea commodi consequatur. Aquis autem vel eum iure reprehenderit. Asas dresasaser. Esse, quam nihil molestiae consequatur, vel illum. Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempora incid. Dent ut labore t dolore magnam. Naliquam quae. Rat voleneni ullam corporis suscipit labasic ut aliquidea commodi consequatur. Aquis autem vel eum iure reprehenderit, muytasas dresasaser. Esse, quam nihil molestiae consequatur, vel illum. Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempo. Asas dresasaser. Esse, quam nihil molestiae consequatur, vel illum. Dastqui dolorem ipsumquia dolsitmet conse tequam eius. Asmodi tempora incid. Dent ut labore t dolore magnam. Naliquam quae. Rat voleneni ullam corporis suscipit labasic ut aliquidea</p>
     </div>
 </div>
-{% endblock content %}
+{% endblock main %}

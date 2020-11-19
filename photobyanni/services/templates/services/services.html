@@ -1,7 +1,20 @@
+<!--Подключение шаблона и static-->
 {% extends "base/base.html" %}
+{% load static %}
 
 
-{% block content %}
+<!--Заголовок этой страницы-->
+{% block title %}Services{% endblock title %}
+
+
+<!--Подключение стилей для этой страницы-->
+{% block styles %}
+<link rel="stylesheet" href="{% static 'services/css/services.css' %}">
+{% endblock styles %}
+
+
+<!--Блок main-->
+{% block main %}
 <div class="container about">
     <button class="about__close-btn" type="button">X</button>
     <div class="about__inner-container">
@@ -26,4 +39,4 @@
         </ul>
     </div>
 </div>
-{% endblock content %}
+{% endblock main %}

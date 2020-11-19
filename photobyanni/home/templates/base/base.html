@@ -1,35 +1,39 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>фотограф Агафья Глифинская 3я</title>
-        <link rel="shortcut icon" type="image/png" href="{% static 'home/images/favicon.png' %}"/>
-        <link rel="stylesheet" type="text/css" href="{% static 'home/css/styles.css' %}">
-    </head>    
-    <body>      
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %}{% endblock title%}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'home/images/favicon.png' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/footer.css' %}">
+    {% block styles %}{% endblock styles %}
+</head>
+
+    <body>
         <div class= "bg-image"></div>
         <header class="header container">
             <div class="header__container">
-                <a href="#" class="logo">KELISSA SMITH
-                <span class="logo__descr">LIFESTYLE PHOTOGRAPHER</span></a>
+                <div class="logo__container">
+                    <a href="{% static 'url home:home_page' %}" class="logo">KELISSA SMITH
+                    <span class="logo__descr">LIFESTYLE PHOTOGRAPHER</span></a>
+                </div>
                 <p class="header__description">I am a professional <span>specializing in lifestyle</span> photography.</p>
             </div>
             <ul class="header__list">
-                <li class="header__list-item"><a class="header__list-link" href="{% url 'home:home_page' %}">Gallery</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="{% url 'about:about_page' %}">About me</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="{% url 'services:services_page' %}">Services</a></li>
-                <li class="header__list-item"><a class="header__list-link" href="{% url 'contacts:contacts_page' %}">Contacts</a></li>
+                <li class="header__list-item"><div class="kapec"><a class="header__list-link" href="{% url 'home:home_page' %}">Gallery</a><a class="header__list-link transparent" href="{% url 'home:home_page' %}">Gallery</a></div></li>
+                <li class="header__list-item"><div class="kapec"><a class="header__list-link" href="{% url 'about:about_page' %}">About me</a><a class="header__list-link transparent" href="{% url 'about:about_page' %}">About me</a></div></li>
+                <li class="header__list-item"><div class="kapec"><a class="header__list-link" href="{% url 'services:services_page' %}">Services</a><a class="header__list-link transparent" href="{% url 'services:services_page' %}">Services</a></div></li>
+                <li class="header__list-item"><div class="kapec"><a class="header__list-link" href="{% url 'contacts:contacts_page' %}">Contacts</a><a class="header__list-link transparent" href="{% url 'contacts:contacts_page' %}">Contacts</a></div></li>
             </ul>
         </header>
+        <main class="container main-container">
 
+        {% block main %}
+        {% endblock main %}
 
-        {% block content %}
-        {% endblock content %}
-    
-    
+        </main>
         <footer class="footer">
             <div class="footer__dark-line"></div>
             <div class="container footer__container">
@@ -70,7 +74,5 @@
             </div>
         </footer>
 
-
-    
     </body>
 </html>

@@ -1,74 +1,80 @@
+<!--Подключение шаблона и static-->
 {% extends "base/base.html" %}
-<!--{% load static %}-->
+{% load static %}
 
-{% block content %}
-<main class="container main-container">
-    <ul class='main__list'>
-        <li class='main__list-item'><img src="{% static 'home/images/lifestyle-mob180x180.jpg' %}" alt="Lifestyle">
-            <div class="main__descr-wrap"><p class="main__list-descr">Lifestyle</p></div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </li>
-        <li class='main__list-item'><img src="{% static 'home/images/portrait-mob180x180.jpg' %}" alt="portrait">
-            <div class="main__descr-wrap"><p class="main__list-descr">Portrait</p></div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </li>
-        <li class='main__list-item'><img src="{% static 'home/images/fashion-mob180x180.jpg' %}" alt="fashion">
-            <div class="main__descr-wrap"><p class="main__list-descr">Fashion</p></div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </li>
-        <li class='main__list-item'><img src="{% static 'home/images/nature-mob180x180.jpg' %}" alt="nature">
-        <div class="main__descr-wrap"><p class="main__list-descr">Nature</p></div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </li>
-        <li class='main__list-item'><img src="{% static 'home/images/citylife-mob180x180.jpg' %}" alt="city life">
-        <div class="main__descr-wrap"><p class="main__list-descr">City Life</p></div>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </li>
-    </ul>
-</main>
-{% endblock content %}
+
+<!--Заголовок этой страницы-->
+{% block title %}Gallery{% endblock title %}
+
+
+<!--Блок main-->
+{% block main %}
+<ul class='main__list'>
+    <li class='main__list-item'><img src="{% static 'home/images/lifestyle-mob180x180.jpg' %}" alt="Lifestyle">
+        <div class="main__descr-wrap"><p class="main__list-descr">Lifestyle</p></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+    <li class='main__list-item'><img src="{% static 'home/images/portrait-mob180x180.jpg' %}" alt="portrait">
+        <div class="main__descr-wrap"><p class="main__list-descr">Portrait</p></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+    <li class='main__list-item'><img src="{% static 'home/images/fashion-mob180x180.jpg' %}" alt="fashion">
+        <div class="main__descr-wrap"><p class="main__list-descr">Fashion</p></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+    <li class='main__list-item'><img src="{% static 'home/images/nature-mob180x180.jpg' %}" alt="nature">
+    <div class="main__descr-wrap"><p class="main__list-descr">Nature</p></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+    <li class='main__list-item'><img src="{% static 'home/images/citylife-mob180x180.jpg' %}" alt="city life">
+    <div class="main__descr-wrap"><p class="main__list-descr">City Life</p></div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </li>
+</ul>
+{% endblock main %}
+

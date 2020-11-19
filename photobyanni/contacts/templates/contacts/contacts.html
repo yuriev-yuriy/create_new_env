@@ -1,6 +1,43 @@
+<!--Подключение шаблона и static-->
 {% extends "base/base.html" %}
+{% load static %}
 
-{% block content %}
-<h1 align="center">Страница в разработке...</h1>
-<p align="center">Приносим свои извенения...</p>
-{% endblock content %}
+
+<!--Заголовок этой страницы-->
+{% block title %}Contacts{% endblock title %}
+
+
+<!--Подключение стилей для этой страницы-->
+{% block styles %}
+<link rel="stylesheet" href="{% static 'contacts/css/contacts.css' %}">
+{% endblock styles %}
+
+
+<!--Блок main-->
+{% block main %}
+<div class="container about">
+    <button class="about__close-btn" type="button">X</button>
+    <div class="about__inner-container">
+        <h2 class="services__title">Contact Info</h2>
+        <div>
+            <p class="services__description">My Number:</p>
+            <a href="tel:+380994043257" class="services__description-link">0994043257</a>
+        </div>
+        <div>
+            <p class="services__description">E-Mail:</p>
+            <a href="mailto:rybak@bmtp.com" class="services__description-link">rybak@bmtp.com</a>
+        </div>
+        <p>or fill the form below to contact me or if you have some questions</p>
+        <form class="services__form" action="#">
+            <input name="user_name" class="services__form-input" type="text" placeholder="Your Name *" required minlength="2">
+            <input name="user_email" class="services__form-input" type="email" placeholder="Your e-mail *" required>
+            <input name="user_phone" class="services__form-input" type="number" placeholder="Your phone number *" required>
+            <textarea name="user_message" class="services__form-textarea" name="" cols="30" rows="10" placeholder="Write your message... *" required minlength="5" maxlength="200"></textarea>
+            <div class="form__btn-wrapper">
+                <button class="form__btn">Send message</button>
+                <p class="form__description"></p>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock main %}
