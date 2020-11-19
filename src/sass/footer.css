@@ -146,12 +146,13 @@ body {
     border-right: #fff;
     display: flex;
     justify-content: space-around;
-    min-width: 400px;
+    min-width: 600px;
     text-align: center;
+    padding: 0 80px;
   }
 
   .header__list-item {
-    margin: 0 auto;
+    margin: 0;
     text-align: center;
     min-height: 20px;
   }
@@ -160,26 +161,26 @@ body {
     display: inline-block;
     position: relative;
     height: 50px;
-    width: 150px;
+    width: 130px;
   }
   .kapec::after {
     content: '';
     display: block;
     height: 1px;
     width: 26px;
-    background-color: #fff;
-    transform: translate(70px, -7px);
+    background-color: #ffffff;
+    transform: translate(54px, -7px);
   }
 
   .header__list-item:hover .kapec::after {
-    transform: rotate(130deg) translate(-50px, -50px);
+    transform: rotate(130deg) translate(-40px, -38px);
     transform-origin: 50% 50%;
     color: #fff;
     transition: transform 0.2s linear;
   }
   .header__list-link {
     position: absolute;
-    left: 46px;
+    left: 28px;
     padding-top: 14px;
   }
 
@@ -252,6 +253,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .header__list {
+    padding: 0 280px;
+  }
+
   .main__list-item:not(:nth-child(3n)) {
     margin-right: 30px;
   }
