@@ -38,8 +38,9 @@ p {
   letter-spacing: 0.07em;
 }
 
-h2 {
-  display: inline;
+.about__descr {
+  display: inline-block;
+  margin-top: 18px;
 }
 
 p {
@@ -70,4 +71,26 @@ p {
 
 .hide {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .about__inner-container {
+    width: 88%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about__pic {
+    width: 310px;
+    height: 260px;
+  }
+
+  .about__descr-section {
+    width: 310px;
+  }
+
+  .about__descr {
+    margin: 0;
+  }
 }

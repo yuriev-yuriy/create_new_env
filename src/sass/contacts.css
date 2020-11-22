@@ -104,3 +104,21 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .about__inner-container {
+    flex-direction: row;
+    min-width: 70%;
+    justify-content: space-around;
+  }
+
+  .services__form {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .services__form {
+    width: 450px;
+  }
+}

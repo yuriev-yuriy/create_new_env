@@ -1,27 +1,24 @@
 .about {
   background: #000;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
 }
 
 .about__inner-container {
-  width: 80%;
-  display: inline-block;
+  /* width: 80%; */
+  /* display: inline-block; */
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
-  padding-top: 24px;
-  padding-bottom: 30px;
+  margin: 0 24px 0 16px;
 }
 
 .about__close-btn {
   align-self: flex-end;
   padding: 12px 16px;
   position: absolute;
-  transform: translate(6px, -6px);
-  /* transform: translateX(6px); */
+  right: -5px;
+  top: -5px;
   background: rgb(241, 170, 103);
   color: #fff;
   border: none;
@@ -41,18 +38,19 @@ p {
 }
 
 .services__title {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 34px;
+  display: block;
 }
 
 .services__list-title {
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 0;
 }
 
 .services__list-paragraph {
   color: rgb(53, 51, 51);
-  font-size: 28px;
+  font-size: 18px;
 }
 
 .services__list {
@@ -62,33 +60,68 @@ p {
 
 .services__icon::before {
   display: inline-block;
-  content: "";
-  width: 30px;
-  height: 30px;
+  content: '';
+  width: 24px;
+  height: 24px;
   background-size: contain;
   transform: translate(-50px, 34px);
 }
 
 .clock-icon::before {
-  background: url("../images/icons/services/clock.png");
-  background-image: url("../images/icons/services/clock.svg");
+  background: url('../images/icons/services/clock.png');
+  background-image: url('../images/icons/services/clock.svg');
   background-size: contain;
 }
 
 .cloud-icon::before {
-  background: url("../images/icons/services/cloud.png");
-  background-image: url("../images/icons/services/cloud.svg");
+  background: url('../images/icons/services/cloud.png');
+  background-image: url('../images/icons/services/cloud.svg');
   background-size: contain;
 }
 
 .bell-icon::before {
-  background: url("../images/icons/services/bell.png");
-  background-image: url("../images/icons/services/bell.svg");
+  background: url('../images/icons/services/bell.png');
+  background-image: url('../images/icons/services/bell.svg');
   background-size: contain;
 }
 
 .picture-icon::before {
-  background: url("../images/icons/services/image.png");
-  background-image: url("../images/icons/services/image.svg");
+  background: url('../images/icons/services/image.png');
+  background-image: url('../images/icons/services/image.svg');
   background-size: contain;
 }
+
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    padding-top: 30px;
+  }
+  .about__inner-container {
+    align-items: flex-start;
+    margin-left: 42px;
+  }
+
+  .services__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .services__list-item {
+    width: 270px;
+  }
+
+  .services__list-item:not(:nth-child(2n)) {
+    margin-right: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__inner-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services__list {
+    justify-content: space-around;
+    align-items: center;
+  }
+} ;
