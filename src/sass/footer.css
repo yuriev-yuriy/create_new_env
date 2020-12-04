@@ -186,17 +186,29 @@ body {
     transform: translate(54px, -7px);
   }
 
+  .active {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    width: 130px;
+    margin-top: 24px;
+  }
+
+  .active::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 26px;
+    background-color: #ffffff;
+    transform: translate(54px, -7px);
+  }
+
   .header__list-item:hover .kapec::after {
     transform: rotate(130deg) translate(-40px, -38px);
     transform-origin: 50% 50%;
     color: #fff;
     transition: transform 0.2s linear;
   }
-
-  /* .active {
-    transform: rotate(130deg) translate(-40px, -38px);
-    transform-origin: 50% 50%;
-  } */
 
   .header__list-link {
     position: absolute;
