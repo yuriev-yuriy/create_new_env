@@ -39,7 +39,7 @@ innerBtn.addEventListener('click', () => {
             innerItems.forEach(innerItem => {
                 innerItem.addEventListener('click', event => {
                     const clickedItem = event.currentTarget;
-                    innerImg.src = `${galleryImg}`;
+                    // innerImg.src = `${galleryImg}`;
                     
 }
             //         console.log(each.src)
