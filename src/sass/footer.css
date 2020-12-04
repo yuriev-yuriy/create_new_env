@@ -145,10 +145,6 @@ body {
   }
 
   .header__list {
-    /* border-top: top -10px;
-    border-bottom: #fff;
-    border-left: #fff;
-    border-right: #fff; */
     border: none;
     display: flex;
     justify-content: space-around;
@@ -196,6 +192,12 @@ body {
     color: #fff;
     transition: transform 0.2s linear;
   }
+
+  /* .active {
+    transform: rotate(130deg) translate(-40px, -38px);
+    transform-origin: 50% 50%;
+  } */
+
   .header__list-link {
     position: absolute;
     left: 28px;
@@ -463,7 +465,7 @@ body {
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .main__inner-span {
@@ -485,10 +487,6 @@ body {
   display: inline-block;
 }
 
-.hide {
-  display: none;
-}
-
 @media (min-width: 1024px) {
   .main__inner-container {
     display: flex;
@@ -497,7 +495,7 @@ body {
   }
 
   .main__inner-wrapper {
-    width: 180px;
+    width: 190px;
     margin-right: 26px;
   }
 
@@ -511,6 +509,10 @@ body {
     width: 34px;
     height: 34px;
     margin-bottom: 6px;
+  }
+
+  .hide {
+    display: none;
   }
 }
 /* advent-pro-300 - latin */
