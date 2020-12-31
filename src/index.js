@@ -57,7 +57,7 @@ innerBtn.addEventListener('click', () => {
 })
 
 galleryImg.map(img => {
-    let idx = 1
+    let idx = 0
     const li = `<a href="#" class="main__inner-img-link"><img class="main__inner-img" id=${idx} src=${img} alt=""></a>`;
     
     innerList.innerHTML += li;
@@ -73,57 +73,100 @@ galleryImg.map(img => {
     innerList.addEventListener('click', event => {
         modalImgRef.src = event.target.src;
         modalImgRef.id = event.target.id;
-        // console.log(event.target.id)
-        // console.log(modalImgRef.id)
         openModal(event)
     })
 
 overlayRef.addEventListener('click', onOverlayClick)
 
+const handleKeyDown = (event) => {
+    if (event.code === 'Escape') {
+        closeModal()
+    }
+}
+let idN;
 function openModal(event) {
-    console.log(event);
+    console.log(typeof event.target.id);
     overlayRef.classList.add('showModal');
     window.addEventListener('keydown', handleKeyDown);
-    let go;
-    console.log(`вне ф-ции ${go}`)
-    btnNext.addEventListener('click', () => {
-        btnPrev.removeAttribute("disabled", "disabled");
-        go = (event.target.id++);
-        console.log(go)
-        // incrFoto(go)
-        // setModalImg(go)
-        if (Number(go) === 0) {
-            btnPrev.setAttribute("disabled", "disabled");
-        }
-        modalImgRef.src = galleryImg[Number(go)]
-        console.log(`в слушателе вперёд ${go}`)
-    })
-    btnPrev.addEventListener('click', event => {
-        console.log(event.target.id)
-        btnPrev.setAttribute('data-url', event.target.id)
-        console.log(event.target.id)
-        const dataIdx = btnPrev.dataset.url;
-        console.log(Number(dataIdx))
-    modalImgRef.src = galleryImg[dataIdx]
-        // setModalImg()
-        //         () => {
-        //         btnNext.removeAttribute("disabled", "disabled");
-        //         go = (--event.target.id-1);
-        //         console.log(`в слушателе назад ${go}`)
-        //         // setModalImg(go)
-        //          modalImgRef.src = galleryImg[Number(go)]
-        //  })
-        // })
-    })
-}
-function closeModal() {
-    overlayRef.classList.remove('showModal');
-    window.removeEventListener('keydown', handleKeyDown);
-    // btnPrev.removeEventListener('click', setModalImg)
+        idN = Number(event.target.id);
+    console.log(idN)
+    // idN = idN + 1;
+    if (idN !== 0) {    
+    btnPrev.removeAttribute("disabled", "disabled");
+    }
+    if (idN !== galleryImg.length - 1) {
+ btnNext.removeAttribute("disabled", "disabled");
+    }
+    btnNext.addEventListener('click', onForward)
+    console.log(idN);
 
-    modalImgRef.src = '';
-    modalImgRef.id = 0;
+    btnPrev.addEventListener('click', onBackward)
+        // btnNext.removeAttribute("disabled", "disabled");
+    // btnPrev.setAttribute('data-url', event.target.id)
+    // let but = Number(btnPrev.dataset.url);
+        // idN = idN - 1;
+        // console.log(idN)
+        // console.log(typeof idN)
+        // setForward(idN);
+// });
 }
+
+function onForward() {
+    btnPrev.removeAttribute("disabled", "disabled");
+idN = idN + 1;
+        console.log( idN)
+        setForward(idN);
+        console.log( idN)
+}
+
+function onBackward() {
+    btnNext.removeAttribute("disabled", "disabled");
+    idN = idN - 1;
+    setForward(idN);
+}
+
+// btnNext.addEventListener('click', setNextPic)
+    // () => {
+    //     btnPrev.removeAttribute("disabled", "disabled");
+    //     go = (event.target.id++);
+    //     console.log(go)
+    //     // incrFoto(go)
+    //     // setModalImg(go)
+    //     if (Number(go) === 0) {
+    //         btnPrev.setAttribute("disabled", "disabled");
+    //     }
+    //     modalImgRef.src = galleryImg[Number(go)]
+    //     console.log(`в слушателе вперёд ${go}`)
+// })
+    
+function setForward(id) {
+    console.log(id)
+    if (id === 0) {
+            btnPrev.setAttribute("disabled", "disabled");
+    } else if (id === galleryImg.length - 1) {
+        btnNext.setAttribute("disabled", "disabled");
+    } 
+
+    // console.log(typeof modalImgRef.id);
+    // console.log(typeof id)
+    modalImgRef.setAttribute('id', id)
+    // if (modalImgRef.id === id) {
+    //     // idN = idN +1
+    //     modalImgRef.src = galleryImg[id];
+    // }
+    modalImgRef.src = galleryImg[id];
+}
+    
+function closeModal() {
+        overlayRef.classList.remove('showModal');
+        window.removeEventListener('keydown', handleKeyDown);
+        // btnPrev.removeEventListener('click', setModalImg)
+    btnNext.removeEventListener('click', onForward);
+    btnPrev.removeEventListener('click', onForward);
+    idN = 0;
+        modalImgRef.src = '';
+    modalImgRef.id = 0;
+    }
 
 function onOverlayClick() {
     if (event.target === event.currentTarget) {
@@ -131,11 +174,6 @@ function onOverlayClick() {
     }
 }
 
-const handleKeyDown = (event) => {
-    if (event.code === 'Escape') {
-        closeModal()
-    }
-}
 
 // btnNext.addEventListener('click', () => {
 //     incrFoto(++modalImgRef.id)
@@ -169,7 +207,13 @@ const handleKeyDown = (event) => {
 //     modalImgRef.src = galleryImg[ind]
 //  }
 
-const setModalImg = event => {
+const setModalImg = idx => {
+    console.log(typeof idx)
+    // const idxNum = Number(idx)
+    // galleryImg.map((img) => { 
+        // const srcNew = img;
+    // console.log(img.id = 7)})
+    modalImgRef.src = galleryImg[idx]
     // let indxNum;
     // const dataIdx = btnPrev.dataset.url;
     // console.log(galleryImg[dataIdx - 1]);
@@ -185,10 +229,7 @@ const setModalImg = event => {
     //     // id = Number(8);
     // }
     // indxNum = Number(id)
-    console.log(event.currentTarget)
+    // console.log(event.currentTarget)
     
     // modalImgRef.src = galleryImg[img.src]
  }
-              
-
-
