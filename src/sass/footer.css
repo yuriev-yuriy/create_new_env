@@ -110,6 +110,24 @@ body {
   text-transform: uppercase;
 }
 
+.main__inner-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main__inner-img {
+  height: 76px;
+  margin: 8px;
+  cursor: pointer;
+  width: 126px;
+}
+
+/* .main__inner-img :hover {
+  transform: rotate(10deg);
+  transition: transform 0.2s linear;
+} */
+
 @media (max-width: 767px) {
   .header__container {
     min-height: 160px;
@@ -125,10 +143,8 @@ body {
   }
 }
 
-@media (max-width: 767px) {
-  .header__list-item:hover {
-    background: #dfd8d8;
-  }
+.header__list-item:hover {
+  background: #dfd8d8;
 }
 
 @media (min-width: 768px) {
@@ -495,14 +511,14 @@ body {
   transition: margin 0.4s ease;
 }
 
-.main__inner-img-link {
+/* .main__inner-img-link {
   display: inline-block;
-}
+} */
 
-.main__inner-img {
+/* .main__inner-img {
   width: 140px;
   height: 80px;
-}
+} */
 
 @media (min-width: 1024px) {
   .main__inner-container {
@@ -553,12 +569,15 @@ body {
   pointer-events: initial;
   opacity: 1;
   visibility: visible;
+  transform: scale(1.1);
+  transition: opacity 0.2s linear, transform 0.3s linear;
 }
 
 .Modal {
   max-width: calc(100vw - 48px);
   max-height: calc(100vh - 24px);
   position: relative;
+  visibility: visible;
 }
 
 .modal__btns {
@@ -581,6 +600,10 @@ body {
 .modal__btn span {
   color: #000;
   opacity: 3;
+}
+
+.hide {
+  display: none;
 }
 
 /* advent-pro-300 - latin */
